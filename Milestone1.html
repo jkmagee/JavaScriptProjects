@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Quiz</title>
+</head>
+
+<body>
+<h1>Merica Quiz</h1>
+<p>This is a quiz about America to see how much you know about the country you live in right now.</p>
+<script>
+	var array1 = new Array();
+	array1[0] = new Array();
+	array1[1] = new Array();
+	array1[2] = new Array();
+	var input;
+	
+	//Question with answers into an array
+	array1[0][0] = "What is the name of our country?";
+	array1[0][1] = "United States";
+	array1[0][2] = "Canada";
+	array1[0][3] = "Mexico";
+	array1[0][4] = "Cuba";
+	
+	//Question with answers into an array
+	array1[1][0] = "What is the name of the biggest state in the United States?";
+	array1[1][1] = "Tennessee";
+	array1[1][2] = "Colorado";
+	array1[1][3] = "California";
+	array1[1][4] = "Alaska";
+	
+	//Question with answers into an array
+	array1[2][0] = "How many states are in the United States";
+	array1[2][1] = "50";
+	array1[2][2] = "51";
+	array1[2][3] = "49";
+	array1[2][4] = "45";
+    
+    var rand = Math.floor(Math.random() * 3);
+	document.write(array1[rand][0] + "<br>");
+    for (i = 1; i <= 4; i++)
+    {
+    document.write("<input type=\"radio\" name=\"bird\">" + array1[rand][i] + "<br>");
+    }
+    
+</script>
+    <button type="submit">Submit</button>
+</body>
+</html>
