@@ -8,27 +8,32 @@
         var counter = 0;
         var exit = false;
         
-        while(counter <= 2 || exit = true){
+        while(counter < 4 && exit == false){
             array[counter] = new Array();
             array[counter][0] = prompt("What is the title of the movie?");
-            array[counter][1] = prompt(array[i][0] + "\n\n" + "Release Date:");
-            array[counter][2] = prompt(array[i][0] + "\n\n" + "Run time:");
-            array[counter][3] = prompt(array[i][0] + "\n\n" + "Rating:");
-            array[counter][4] = prompt(array[i][0] + "\n\n" + "Cast:");
-            array[counter][5] = prompt(array[i][0] + "\n\n" + "Director:");
-            array[counter][6] = prompt(array[i][0] + "\n\n" + "Genre:");
-            array[counter][7] = prompt(array[i][0] + "\n\n" + "Synopsis:");
-            /*if (array[counter][0]||array[counter][1]||array[counter][2]||array[counter][3]||array[counter][4]||array[counter][5]||array[counter][6]||array[counter][0]){
-                exit = true;*/
-            //}
+            array[counter][1] = prompt(array[counter][0] + "\n\n" + "Release Date:");
+            array[counter][2] = prompt(array[counter][0] + "\n\n" + "Run time:");
+            array[counter][3] = prompt(array[counter][0] + "\n\n" + "Rating:");
+            array[counter][4] = prompt(array[counter][0] + "\n\n" + "Cast:");
+            array[counter][5] = prompt(array[counter][0] + "\n\n" + "Director:");
+            array[counter][6] = prompt(array[counter][0] + "\n\n" + "Genre:");
+            array[counter][7] = prompt(array[counter][0] + "\n\n" + "Synopsis:");
+            counter++;
         }
         
-        /*while(array[counter]){
-            for(i = 0; i<=7; i++){
+        document.write(array[0][4]);
+        
+        while(exit == false){
+            for(i=0;i<7;i++){
                 document.write(array[counter][i]);
-                document.write("<hr");
+                document.write("<hr>");
             }
-        }*/
+            counter++;
+            if(counter < 2){
+                exit = true;
+            }
+        }
+        
         
         
                
