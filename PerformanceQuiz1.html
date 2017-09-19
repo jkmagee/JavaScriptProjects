@@ -5,39 +5,35 @@
 <body>
     <script language="javascript">
         var array = new Array();
-        var counter = 0;
+        array[0] = new Array("What movie did you watch?",
+                             "Release Date:",
+                             "Run Time:",
+                             "Rating: \(With explination why\)",
+                             "Cast:",
+                             "Genre:",
+                             "Director:",
+                             "Synopsis:");
+        var counter = 1;
         var exit = false;
+        var num = 7;
         
-        while(counter < 4 && exit == false){
+        while(counter <= 10 && exit == false){
             array[counter] = new Array();
-            array[counter][0] = prompt("What is the title of the movie?");
-            array[counter][1] = prompt(array[counter][0] + "\n\n" + "Release Date:");
-            array[counter][2] = prompt(array[counter][0] + "\n\n" + "Run time:");
-            array[counter][3] = prompt(array[counter][0] + "\n\n" + "Rating:");
-            array[counter][4] = prompt(array[counter][0] + "\n\n" + "Cast:");
-            array[counter][5] = prompt(array[counter][0] + "\n\n" + "Director:");
-            array[counter][6] = prompt(array[counter][0] + "\n\n" + "Genre:");
-            array[counter][7] = prompt(array[counter][0] + "\n\n" + "Synopsis:");
-            counter++;
-        }
-        
-        document.write(array[0][4]);
-        
-        while(exit == false){
-            for(i=0;i<7;i++){
-                document.write(array[counter][i]);
-                document.write("<hr>");
+            for(i=0;i<=num;i++){
+                array[counter][i] = prompt(array[0][i]);
+                if(array[counter][i] == "exit"){
+                    exit = true;
+                    num = 0;
+                }
             }
             counter++;
-            if(counter < 2){
-                exit = true;
-            }
         }
-        
-        
-        
-               
-    
+        for (h = 1; h <= array.length -1; h++){
+            for (j=0;j<=7;j++){
+                document.write(array[h][j] + "<br>");
+            }
+            document.write("<hr><br>");
+        }
     </script>
 
 </body>
