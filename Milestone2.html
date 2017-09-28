@@ -45,12 +45,17 @@
     shuffle(rand);
     
 	document.write(array1[rand][0] + "<br>");
-    document.write("<input type=\"radio\" name=\"name\" id=\"myId1\">" + array1[rand][2] + "<br>");
-    document.write("<input type=\"radio\" name=\"name\" id=\"myId2\">" + array1[rand][3] + "<br>");
-    document.write("<input type=\"radio\" name=\"name\" id=\"myId3\">" + array1[rand][4] + "<br>");
-    document.write("<input type=\"radio\" name=\"name\" id=\"myId4\">" + array1[rand][5] + "<br>");
+    for (p = 2; p <= 5; p++)
+    {
+        createRadButton(rand, p);
+    }
     
     checkAnswer();
+    
+    function createRadButton(box1, box2)
+    {
+        document.write('<input type="radio" name="name">' + array1[box1][box2] + "<br>");
+    }
     
     function shuffle(a)
     {  
@@ -90,5 +95,6 @@
     
 </script>
     <button type="submit" onclick="checkAnswer()">Submit</button>
+    <button type="reset" onclick="location.reload()">Next Question</button>
 </body>
 </html>
